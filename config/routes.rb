@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # get 'questions/new'
   # get 'questions/edit'
   
+  root 'questions#index'
+  
   resources :questions
   # index => 質問一覧
   # create => 新規作成の時の処理
