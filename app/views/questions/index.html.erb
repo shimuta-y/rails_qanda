@@ -11,8 +11,8 @@
             <tbody>
                 <% @questions.each do |question| %>
                 <tr>
-                    <td><% question.id %></td>
-                    <td><% question.title %></td>
+                    <td><%= question.id %></td>
+                    <td><%= question.title %></td>
                     <td>[Edit] [Delete]</td>
                 </tr>
                 <% end %>
