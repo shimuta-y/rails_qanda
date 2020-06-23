@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
       redirect_to root_path, notice: 'Success!'
     else
       flash[:alert] = 'Save error!'
-      # render :new
+      render :new
     end
   end
 
