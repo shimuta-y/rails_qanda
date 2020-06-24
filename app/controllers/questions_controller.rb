@@ -24,8 +24,21 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-    # @question = Question.find(params[:id])
+    @question = Question.find(params[:id])
   end
+  
+  def update
+    # DBよりデータを抽出
+    @question = Question.find(params[:id])
+    # ストロングパラメータの場合更新（セキュリティ上）
+    if @question.update(question_params)
+      redirect_to root_path, notice: 'Succees!'
+    else
+      flash[:alert] = 'Save error!'
+      render :edit
+    end
+  end
+  
   
   private
     def question_params
