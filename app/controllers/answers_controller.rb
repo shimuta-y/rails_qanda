@@ -18,6 +18,17 @@ class AnswersController < ApplicationController
     @answer = @question.answers.find(params[:id])
   end
   
+  def update
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.find(params[:id])
+    
+    if @answer = @question.update(answer_params)
+      redirect_to question_path(@question)
+    else
+      render :edit
+    end
+  end
+  
   private
     def answer_params
       params.require(:answer).permit(:content, :name, :question_id)
