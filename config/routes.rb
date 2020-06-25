@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   
   root 'questions#index'
   
-  resources :questions
+  resources :questions do
+    resources :answers
+  end
   # index => 質問一覧
   # create => 新規作成の時の処理
   # new => 質問の新規登録
