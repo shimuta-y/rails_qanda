@@ -1,5 +1,8 @@
 # Q&AサービスのWebアプリ
 
+## 作成したWebアプリ
+https://rails-qanda-shimuta.herokuapp.com/
+
 ## 機能
 
 - 新規質問投稿
